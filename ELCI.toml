@@ -1,0 +1,30 @@
+# Staged by portfolio alignment 2026-10-20; NOT yet written to the repository.
+# Requires human review (§38): class, maturity, and relationships are proposals.
+schema = 1
+
+[project]
+name = "velocity-roadmap-anyhow"
+class = "heritage"
+maturity = "M4"
+status = "active"
+description = "Draft roadmap for the Velocity project: replaces the CVE-flagged anyhow crate (12 files, 37 call sites) with typed errors across async boundaries and the CLI. Amber classifies the dependency as security critical; the full migration plan, risks and acceptance criteria live in ROADMAP.md."
+owner = "elci-group"
+criticality = "low"
+
+[interfaces]
+cli = false
+library = true
+http = false
+event_producer = false   # TODO confirm (§10)
+event_consumer = false   # TODO confirm (§10)
+
+[portfolio]
+supersedes = []
+superseded_by = []
+related = ["velocity"]
+depends_on = []          # TODO populate (§23)
+consumed_by = []         # TODO populate (§23)
+
+[maintenance]
+review_interval_days = 180
+last_reviewed = "2026-10-20"
